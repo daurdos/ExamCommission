@@ -1,0 +1,63 @@
+﻿@model Phd.Models.PhdStudent
+
+@{
+    ViewData["Title"] = "Удалить профиль докторанта";
+}
+
+<h2>Удаление</h2>
+
+<h3>Вы точно желаете удалить данный профиль?</h3>
+<div>
+    <h4>Докторант: </h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.LastName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.LastName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FirstName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.MiddleName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.MiddleName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.MajorCode)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.MajorCode)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.MajorName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.MajorName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ThesisNameRus)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ThesisNameRus)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ThesisComDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ThesisComDate)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <a asp-action="Index">Назад</a>
+    </form>
+</div>

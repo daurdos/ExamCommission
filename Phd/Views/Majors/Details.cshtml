@@ -1,0 +1,42 @@
+﻿@model Phd.Models.Major
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Major</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.MajorCypher)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.MajorCypher)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.MajorCypherName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.MajorCypherName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.MajorCypherNameKaz)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.MajorCypherNameKaz)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.MajorCypherNameEng)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.MajorCypherNameEng)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

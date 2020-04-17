@@ -1,0 +1,10 @@
+﻿@{
+    ViewData["Title"] = " Генерация QR-кода";
+}
+<h2>@ViewData["Title"].</h2>
+<h3>@ViewData["Message"]</h3>
+<div>
+    Просканируйте QR-код
+</div>
+<br/>
+<qrcode alt="QR Code" content="@ViewBag.Url" />

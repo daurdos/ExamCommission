@@ -1,0 +1,48 @@
+﻿@model Phd.Models.DisCouncil
+
+@{
+    ViewData["Title"] = "Детали диссовета";
+}
+
+<h2>Детали</h2>
+
+<div>
+    <h4>диссовета</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.OrderNumber)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.OrderNumber)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CouncilChairman)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CouncilChairman)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CouncilSecretary)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CouncilSecretary)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CouncilMember)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CouncilMember)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DefenceDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DefenceDate)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Изменить</a> |
+    <a asp-action="Index">Назад</a>
+</div>

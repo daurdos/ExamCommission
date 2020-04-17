@@ -1,0 +1,50 @@
+﻿@model Phd.Models.DisCouncil
+
+@{
+    ViewData["Title"] = "Создать диссовет";
+}
+
+<h2>Создать</h2>
+
+<h4>Диссертационные советы</h4>
+<hr />
+
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="OrderNumber" class="control-label"></label>
+                <input asp-for="OrderNumber" class="form-control" />
+                <span asp-validation-for="OrderNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CouncilChairman" class="control-label"></label>
+                <input asp-for="CouncilChairman" class="form-control" />
+                <span asp-validation-for="CouncilChairman" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CouncilSecretary" class="control-label"></label>
+                <input asp-for="CouncilSecretary" class="form-control" />
+                <span asp-validation-for="CouncilSecretary" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CouncilMember" class="control-label"></label>
+                <textarea asp-for="CouncilMember" class="form-control">
+                </textarea>
+
+                <span asp-validation-for="CouncilMember" class="text-danger"></span>
+            </div>
+
+            <br>
+            <div class="form-group">
+                <input type="submit" value="Создать" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Назад</a>
+</div>
+

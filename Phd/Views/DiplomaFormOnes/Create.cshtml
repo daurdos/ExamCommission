@@ -1,0 +1,52 @@
+﻿@model Phd.Models.DiplomaFormOne
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h2>Create</h2>
+
+<h4>DiplomaFormOne</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Number" class="control-label"></label>
+                <input asp-for="Number" class="form-control" />
+                <span asp-validation-for="Number" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <div class="checkbox">
+                    <label>
+                        <input asp-for="Damaged" /> @Html.DisplayNameFor(model => model.Damaged)
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="checkbox">
+                    <label>
+                        <input asp-for="Lost" /> @Html.DisplayNameFor(model => model.Lost)
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label asp-for="PhdStudentId" class="control-label"></label>
+                <select asp-for="PhdStudentId" class ="form-control" asp-items="ViewBag.PhdStudentId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="PhdStudentManualId" class="control-label"></label>
+                <select asp-for="PhdStudentManualId" class ="form-control" asp-items="ViewBag.PhdStudentManualId"></select>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

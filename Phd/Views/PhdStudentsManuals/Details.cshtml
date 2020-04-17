@@ -1,0 +1,132 @@
+﻿@model Phd.Models.PhdStudentManual
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>PhdStudentManual</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.LastName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.LastName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FirstName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.MiddleName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.MiddleName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.LastNameKaz)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.LastNameKaz)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FirstNameKaz)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FirstNameKaz)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.MiddleNameKaz)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.MiddleNameKaz)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.LastNameEng)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.LastNameEng)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FirstNameEng)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FirstNameEng)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.MiddleNameEng)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.MiddleNameEng)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Rector)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Rector.Id)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ThesisNameRus)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ThesisNameRus)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ThesisNameKaz)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ThesisNameKaz)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ThesisNameEng)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ThesisNameEng)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ThesisComDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ThesisComDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ComMemberNumberTotal)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ComMemberNumberTotal)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ComMemberNumberSpecific)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ComMemberNumberSpecific)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Major)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Major.Id)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TrainingDirection)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TrainingDirection.Id)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DisCouncil)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DisCouncil.CouncilChairman)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

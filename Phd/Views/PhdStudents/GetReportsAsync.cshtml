@@ -1,0 +1,91 @@
+﻿@model Phd.Models.StudentReportViewModel
+
+
+@{
+    ViewData["Title"] = "Результаты";
+}
+    <body align="center">
+        <p><h3>РЕЗУЛЬТАТЫ ТАЙНОГО ГОЛОСОВАНИЯ</h3></p>
+        <hr />
+        <div><h3>по диссертации докторанта: <h3></div>
+        <br />
+        <div><strong><b><em>@Html.DisplayFor(model => model.LName)</em></b></strong></div>
+        <div><strong><b><em>@Html.DisplayFor(model => model.FName)</em></b></strong></div>
+        <div><strong><b><em>@Html.DisplayFor(model => model.MName)</em></b></strong></div>
+        <br />
+        <div>на соискание степени доктора PhD по специальности</div>
+        <br />
+        <div><b><em>@Html.DisplayFor(model => model.MajCode) </em></b></div>
+        <div><b><em>@Html.DisplayFor(model => model.MajName) </em></b></div>
+        <br />
+        <div>
+
+            Состав диссертационного совета утвержден в количестве
+            @Html.DisplayFor(model => model.MemberNumberTotal)
+
+        </div>
+        <hr />
+        <div>
+            Присутствовало на заседании ____
+            <b>
+
+            </b>
+            членов совета, в том числе по профилю рассматриваемой диссертации _____
+        </div>
+        <hr />
+        <div>
+            Результаты голосования по вопросу присуждения степени доктора философии (PhD)
+            <br /> <strong>
+                @Html.DisplayFor(model => model.LName)
+                @Html.DisplayFor(model => model.FName)
+                @Html.DisplayFor(model => model.MName)
+            </strong>
+            <br />
+        </div>
+        <hr />
+        <strong>«За»</strong>
+        <b><em>@Html.DisplayFor(model => model.PositiveVoteQuantity)</em></b>
+        <hr />
+        <strong> «Против» </strong>
+        <b><em>@Html.DisplayFor(model => model.NegativeVoteQuantity)</em></b>
+        <hr />
+        <table>
+            <tr>
+                <td>
+                    <label>Председатель комиссии</label>
+                </td>
+                <td>
+                    <label>____________________________________________________________________</label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Члены комиссии </label>
+                </td>
+                <td>
+                    <label>____________________________________________________________________</label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label> </label>
+                </td>
+                <td>
+                    <label>____________________________________________________________________</label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label> </label>
+                </td>
+                <td>
+                    <label>____________________________________________________________________</label>
+                </td>
+            </tr>
+
+
+
+
+        </table>
+
+    </body>

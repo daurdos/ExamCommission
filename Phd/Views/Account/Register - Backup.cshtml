@@ -1,0 +1,67 @@
+﻿
+
+@model Phd.ViewModels.RegisterViewModel
+<h2>Регистрация нового пользователя</h2>
+<form method="post" asp-controller="Account" asp-action="Register">
+    <div asp-validation-summary="ModelOnly"></div>
+    <div>
+        <label asp-for="Email"></label><br />
+        <input asp-for="Email" />
+        <span asp-validation-for="Email"></span>
+    </div>
+    <div>
+        <label asp-for="LastName"></label><br />
+        <input asp-for="LastName" />
+        <span asp-validation-for="LastName"></span>
+    </div>
+    <div>
+        <label asp-for="FirstName"></label><br />
+        <input asp-for="FirstName" />
+        <span asp-validation-for="FirstName"></span>
+    </div>
+    <div>
+        <label asp-for="MiddleName"></label><br />
+        <input asp-for="MiddleName" />
+        <span asp-validation-for="MiddleName"></span>
+    </div>
+    <div>
+        <label asp-for="Password"></label><br />
+        <input asp-for="Password" />
+        <span asp-validation-for="Password"></span>
+    </div>
+    <div>
+        <label asp-for="PasswordConfirm"></label><br />
+        <input asp-for="PasswordConfirm" />
+        <span asp-validation-for="PasswordConfirm"></span>
+    </div>
+    <div>
+        <label asp-for="DisCouncilId"></label><br />
+        <select asp-for="DisCouncilId" />
+        <span asp-validation-for="DisCouncilId"></span>
+    </div>
+    
+    <div>
+        <input type="submit" value="Регистрация" />
+    </div>
+</form>
+
+
+
+@section Scripts
+{
+    <script type="text/javascript">
+
+        setDictionaryLists('@Url.Action("GetDisCouncils", "Dictionaries")', '#DisCouncilId');
+    </script>
+}
+
+    @*$.getJSON('@Url.Action("GetDisCouncils", "Dictionaries")', function(data){
+    var html = '';
+    var len = data.length;
+    for (var i = 0; i< len; i++) {
+        html += '<option value="' + data[i].id + '">' + data[i].orderNumber + '</option>';
+    }
+    $('#DisCouncilId').append(html);
+    });
+    </script>
+} *@

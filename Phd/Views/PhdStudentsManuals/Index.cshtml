@@ -1,0 +1,143 @@
+﻿@model IEnumerable<Phd.Models.PhdStudentManual>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.LastName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FirstName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MiddleName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LastNameKaz)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FirstNameKaz)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MiddleNameKaz)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LastNameEng)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FirstNameEng)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MiddleNameEng)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Rector)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ThesisNameRus)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ThesisNameKaz)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ThesisNameEng)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ThesisComDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ComMemberNumberTotal)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ComMemberNumberSpecific)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Major)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TrainingDirection)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DisCouncil)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.LastName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FirstName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MiddleName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LastNameKaz)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FirstNameKaz)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MiddleNameKaz)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LastNameEng)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FirstNameEng)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MiddleNameEng)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Rector.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ThesisNameRus)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ThesisNameKaz)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ThesisNameEng)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ThesisComDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ComMemberNumberTotal)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ComMemberNumberSpecific)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Major.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TrainingDirection.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DisCouncil.CouncilChairman)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

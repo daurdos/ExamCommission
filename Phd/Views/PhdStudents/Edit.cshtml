@@ -1,0 +1,98 @@
+﻿@model Phd.Models.PhdStudent
+
+@{
+    ViewData["Title"] = "Изменить профиль";
+}
+
+<h2>Изменение</h2>
+
+<h4> Профиль докторанта: </h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="LastName" class="control-label"></label>
+                <input asp-for="LastName" class="form-control" />
+                <span asp-validation-for="LastName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FirstName" class="control-label"></label>
+                <input asp-for="FirstName" class="form-control" />
+                <span asp-validation-for="FirstName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MiddleName" class="control-label"></label>
+                <input asp-for="MiddleName" class="form-control" />
+                <span asp-validation-for="MiddleName" class="text-danger"></span>
+            </div>
+
+
+            <div class="form-group">
+                <label asp-for="MajorId" class="control-label"></label>
+                <select asp-for="MajorId"
+                        class="form-control"
+                        asp-items="@(new SelectList(@ViewBag.ListOfMajor, "Id", "MajorCypher"))"></select>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="TrainingDirectionId" class="control-label"></label>
+                <select asp-for="TrainingDirectionId"
+                        class="form-control"
+                        asp-items="@(new SelectList(@ViewBag.ListOfTrainingDirection, "Id", "TrainingDirectionCypher"))"></select>
+            </div>
+
+
+            <div class="form-group">
+                <label asp-for="ThesisNameRus" class="control-label"></label>
+                <input asp-for="ThesisNameRus" class="form-control" />
+                <span asp-validation-for="ThesisNameRus" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ThesisComDate" class="control-label"></label>
+                <input asp-for="ThesisComDate" class="form-control" />
+                <span asp-validation-for="ThesisComDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ThesisComDate" class="control-label"></label>
+                <input asp-for="ThesisComDate" class="form-control" />
+                <span asp-validation-for="ThesisComDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ComMemberNumberTotal" class="control-label"></label>
+                <input asp-for="ComMemberNumberTotal" class="form-control" />
+                <span asp-validation-for="ComMemberNumberTotal" class="text-danger"></span>
+            </div>
+
+
+            <div class="form-group">
+                <label asp-for="DisCouncilId" class="control-label"></label><br />
+                <select asp-for="DisCouncilId" class="form-control" />
+                <span asp-validation-for="DisCouncilId" class="text-danger"></span>
+            </div>
+
+
+
+            <div class="form-group">
+                <input type="submit" value="Сохранить" class="btn btn-default" />
+            </div>
+
+
+
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Назад</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    <script type="text/javascript">
+
+        setDictionaryLists('@Url.Action("GetDisCouncils", "Dictionaries")', '#DisCouncilId');
+    </script>
+}

@@ -1,0 +1,146 @@
+﻿
+@model Phd.Models.StudentReportViewModel
+
+
+
+@{
+    ViewData["Title"] = "Детали докторанта";
+}
+
+
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+
+</head>
+<body>
+
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10 offset-md-1">
+                <div class="form-border">
+                    <form action="#" method="POST" class="builiten">
+                        <h4 class="text-center">БЮЛЛЕТЕНЬ</h4>
+                        <p class="text-center">к заседанию Диссертационного совета по направлению подготовки кадров</p>
+                        <center>
+                            <em>@Html.DisplayFor(model => model.TrainingDirectionCypher)  </em> <hr />
+                        </center>
+                        <center>
+                            <em>@Html.DisplayFor(model => model.TrainingDirectionCypherName)  </em> <hr />
+                        </center>
+                        <p class="text-center">по защите докторских диссертаций в ЕНУ имени Л.Н. Гумилева</p>
+                        <p class="text-center">от <em>@Html.DisplayFor(model => model.ReleaseDate.Day)</em>.<em>@Html.DisplayFor(model => model.ReleaseDate.Month)</em>.<em>@Html.DisplayFor(model => model.ReleaseDate.Year)</em>  <hr /></p>
+
+                        <center>
+                            <table border="1">
+                                <tr>
+                                    <th>Фамилия, имя, отчество соискателя</th>
+                                    <th>Присуждаемая степень</th>
+                                    <th>Результаты голосования</th>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <center>
+                                            <em> @Html.DisplayFor(model => model.LName) </em>
+                                            <em> @Html.DisplayFor(model => model.FName) </em>
+                                            <em> @Html.DisplayFor(model => model.MName) </em>
+                                        </center>
+
+                                    </td>
+                                    <td>
+                                        <center>
+                                            </br>
+                                            <p><b>Доктор PhD по специальности</b></p>
+                                            <p><b>Шифр: </b>@Html.DisplayFor(model => model.MajCode) </p>
+                                            <em></em>
+
+                                            <p><b>Наименование: </b>@Html.DisplayFor(model => model.MajName)</p>
+                                            <em></em>
+                                        </center>
+
+                                    </td>
+                                    <td>
+                                        <center>
+                                            <label><input type="radio" name="dva" /> За</label> <label><input type="radio" name="dva" /> Против</label> </br>
+                                            <a asp-action="CreateVote" asp-route-id="@ViewBag.Id">Голосовать </a>
+                                        </center>
+                                    </td>
+                                </tr>
+                            </table>
+                        </center>
+
+
+
+
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

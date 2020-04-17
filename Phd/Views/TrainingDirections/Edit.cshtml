@@ -1,0 +1,46 @@
+﻿@model Phd.Models.TrainingDirection
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h2>Edit</h2>
+
+<h4>TrainingDirection</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="TrainingDirectionCypher" class="control-label"></label>
+                <input asp-for="TrainingDirectionCypher" class="form-control" />
+                <span asp-validation-for="TrainingDirectionCypher" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TrainingDirectionCypherName" class="control-label"></label>
+                <input asp-for="TrainingDirectionCypherName" class="form-control" />
+                <span asp-validation-for="TrainingDirectionCypherName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TrainingDirectionCypherNameKaz" class="control-label"></label>
+                <input asp-for="TrainingDirectionCypherNameKaz" class="form-control" />
+                <span asp-validation-for="TrainingDirectionCypherNameKaz" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TrainingDirectionCypherNameEng" class="control-label"></label>
+                <input asp-for="TrainingDirectionCypherNameEng" class="form-control" />
+                <span asp-validation-for="TrainingDirectionCypherNameEng" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

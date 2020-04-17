@@ -1,0 +1,49 @@
+﻿@model Phd.Models.Grade
+@{
+    ViewData["Title"] = "CreateGrade";
+}
+
+<h2>CreateGrade</h2>
+<p>
+    @ViewBag.userId
+</p>
+
+
+<div class="row">
+    <div class="col-md-4">
+
+
+        <form asp-action="CreateGrade">
+
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" value="@ViewBag.StudentId" name="StudentId" />
+            <input type="hidden" value="@ViewBag.UserId" name="UserId" />
+            <div>
+                <div>
+                    <label asp-for="Value" class="control-label"></label>
+                    <input asp-for="Value" class="form-control" />
+                    <span asp-validation-for="Value" class="text-danger"></span>
+                </div>
+                <div>
+                    <input type="submit" value="Add" />
+                </div>
+            </div>
+        </form>
+
+
+
+
+
+
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Назад к списку</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+
+

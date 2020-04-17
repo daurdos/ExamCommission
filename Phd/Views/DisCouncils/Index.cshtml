@@ -1,0 +1,59 @@
+﻿@model IEnumerable<Phd.Models.DisCouncil>
+
+@{
+    ViewData["Title"] = "Список диссоветов";
+}
+
+<h2>Список диссоветов</h2>
+
+<p>
+    <a asp-action="Create">Создать диссовет</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.OrderNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CouncilChairman)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CouncilSecretary)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CouncilMember)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DefenceDate)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.OrderNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CouncilChairman)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CouncilSecretary)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CouncilMember)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DefenceDate)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Изменить</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Детали</a> |
+                <!--<a asp-action="Delete" asp-route-id="@item.Id">Удалить</a> -->
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

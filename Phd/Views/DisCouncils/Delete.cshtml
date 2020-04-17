@@ -1,0 +1,51 @@
+﻿@model Phd.Models.DisCouncil
+
+@{
+    ViewData["Title"] = "Удаление диссовета";
+}
+
+<h2>Delete</h2>
+
+<h3>Вы уверены, что хотите удалить диссовет? </h3>
+<div>
+    <h4>DisCouncil</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.OrderNumber)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.OrderNumber)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CouncilChairman)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CouncilChairman)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CouncilSecretary)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CouncilSecretary)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CouncilMember)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CouncilMember)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DefenceDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DefenceDate)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Удалить" class="btn btn-default" /> |
+        <a asp-action="Index">Назад</a>
+    </form>
+</div>

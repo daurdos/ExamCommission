@@ -1,0 +1,44 @@
+﻿@model Phd.Models.Vote
+
+@{
+    ViewData["Title"] = "Подтверждение голоса";
+}
+
+<h2>Пожалуйста подтвердите Ваше действие еще раз</h2>
+<h3>При успешном зачтении голоса, система произведет выход автоматически</h3>
+<h4></h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        
+        
+        <form asp-action="CreateVote">
+
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" value="@ViewBag.Id" name="PhdStudentId" />
+            <div>
+                <div>
+                    <label asp-for="Voice">Голосовать</label>
+                    <select asp-for="Voice" asp-items="Html.GetEnumSelectList<Choice>()"></select>
+                </div>
+                <div>
+                    <input type="submit" value="Голосовать" />
+                </div>
+            </div>
+        </form>
+        
+        
+        
+        
+        
+
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Назад к списку</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
